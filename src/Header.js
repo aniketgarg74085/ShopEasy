@@ -17,7 +17,7 @@ function Header() {
 
             <div className="header__nav">
                 <div className="header__option">
-                    <span className="header__optionone">Hello Sam</span>
+                    <span className="header__optionone">Hello, Sign in</span>
                     <span className="header__optiontwo">Sign In</span>
                 </div>
 
