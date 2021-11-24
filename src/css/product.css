@@ -1,7 +1,7 @@
 .products_wrap {
     display: grid;
     place-items: center;
-    margin-top: -270px;
+    margin-top: -240px;
     grid-template-columns: auto auto auto auto;
 }
 
