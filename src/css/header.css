@@ -101,11 +101,11 @@
 
 }
 
-.header__optionBasket span {
-    margin-top: -20%;
+.header__optionBasket a span {
+    margin-top: -20px;
     width: 20px;
     height: 20px;
-    background-color: #fff;
+    background-color:#fff;
     display: inline-block;
     color: #000;
     border-radius: 50%;
