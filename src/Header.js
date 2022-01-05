@@ -4,7 +4,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Link } from 'react-router-dom';
 
-function Header({cart}) {
+function Header({cart, categoryList}) {
     return (
         <>
             <div className="header">
@@ -38,13 +38,15 @@ function Header({cart}) {
 
             <div className="header__bottom">
                 <ul>
-                    <li>All</li>
-                    <li>Appliances</li>
-                    <li>Electronics</li>
-                    <li>Essentials</li>
-                    <li>Fashion</li>
-                    <li>Home</li>
-                    <li>Mobiles</li>
+                    {
+                        categoryList?.map(category=>{
+                            return <li key={category.id}>
+                                <Link to={'/category/mobile'}>
+                                {category.name}
+                                </Link>
+                                </li> 
+                        })
+                    }
                 </ul>
             </div>
         </>

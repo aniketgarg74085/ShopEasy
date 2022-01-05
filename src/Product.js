@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import "./css/product.css";
 
-function Product({ productsList, addToCart}) {
+function Product({ productsList, addToCart, fetchProductsByCategroy}) {
+  let {slug} = useParams()
+  console.log(slug);
+
+  useEffect(()=> {
+    if(slug) { fetchProductsByCategroy(slug)}
+  },[slug])
+  
   return (
     <div className="products_wrap">
       {productsList && productsList.map((items) => {
